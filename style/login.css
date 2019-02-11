@@ -1,0 +1,26 @@
+.login-wrapper {
+    padding: 30px;
+}
+.back-wrapper {
+     color: var(--primary);
+     margin-bottom: 30px;
+     font-size: 24px;
+}
+.login-content h1 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+.login-content a {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+    color: #BBBFC3;
+    text-decoration: underline;
+}
+.login-content .btn {
+    color: #ffffff;
+    text-decoration: none;
+}

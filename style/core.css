@@ -1,0 +1,344 @@
+:root {
+    --primary: #3475DF; 
+  }
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+* {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a,
+a:visited, a:focus, a:hover {
+    text-decoration: none;
+    border: none;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+img {
+    border-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+[hidden] {
+    display: none !important;
+}
+
+[disabled] {
+    cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+.btn {
+    display: block;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    padding: 10px;
+    /* right: 45px; */
+    font-weight: 700;
+    border-radius: 90px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.btn-primary {
+    color: #fff;
+    background: var(--primary);
+    border: 1px solid #fff;
+    
+}
+.btn-outline {
+    background: #fff;
+    color: var(--primary);
+}
+.w100 {
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+}
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+    position:relative; 
+    margin-bottom:45px; 
+  }
+  input 				{
+    font-size:14px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#BBBFC3; 
+    font-size:16px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown label {
+    position: relative;
+}
+
+.dropdown-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1
+}
+.dropdown-inner {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2
+}
+.dropdown-hover:hover .dropdown-inner,
+.dropdown-open:checked ~ .dropdown-inner {
+    opacity: 1;
+    visibility: visible
+}
+.dropdown-hover:hover ~ .dropdown-overlay,
+.dropdown-open:checked ~ .dropdown-overlay {
+    display: block
+}
+.dropdown-inner {
+    min-width: 100%;
+    padding: 15px;
+    background: #fff;
+    border: #aaa solid 1px;
+    border-radius: 3px;
+    transition: opacity .3s, visibility .3s;
+}
+.card {
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.md-checkbox {
+    position: relative;
+    margin: 1em 0;
+    text-align: left;
+  }
+  .md-checkbox.md-checkbox-inline {
+    display: inline-block;
+  }
+  .md-checkbox label {
+    cursor: pointer;
+    display: inline;
+    line-height: 1.25em;
+    vertical-align: top;
+    clear: both;
+    padding-left: 1px;
+  }
+  .md-checkbox label:not(:empty) {
+    padding-left: 0.75em;
+  }
+  .md-checkbox label:before, .md-checkbox label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .md-checkbox label:before {
+    width: 1.25em;
+    height: 1.25em;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 0.125em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .md-checkbox input[type="checkbox"] {
+    outline: 0;
+    visibility: hidden;
+    width: 1.25em;
+    margin: 0;
+    display: block;
+    float: left;
+    font-size: inherit;
+  }
+  .md-checkbox input[type="checkbox"]:checked + label:before {
+    background: #337ab7;
+    border: none;
+  }
+  .md-checkbox input[type="checkbox"]:checked + label:after {
+    transform: translate(0.25em, 0.33654em) rotate(-45deg);
+    width: 0.75em;
+    height: 0.375em;
+    border: 0.125em solid #fff;
+    border-top-style: none;
+    border-right-style: none;
+  }
+  .md-checkbox input[type="checkbox"]:disabled + label:before {
+    border-color: rgba(0, 0, 0, 0.26);
+  }
+  .md-checkbox input[type="checkbox"]:disabled:checked + label:before {
+    background: rgba(0, 0, 0, 0.26);
+  }
+  
