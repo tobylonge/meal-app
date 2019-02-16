@@ -1,0 +1,33 @@
+.home-wrapper {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3475DF;
+}
+.home-content {
+    margin-top: -120px;
+}
+.home-wrapper h1 {
+    color: #fff;
+    font-size: 22px;
+}
+.home-wrapper .home-buttons {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 45px;
+}
+.home-wrapper .home-content img {
+    display: block;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
