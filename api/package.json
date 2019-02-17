@@ -1,0 +1,16 @@
+{
+  "name": "Api for my meal booking app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meal",
+    "food",
+    "booking"
+  ],
+  "author": "Oluwatobi Alonge (tobylonge@gmail.com)",
+  "license": "ISC"
+}
