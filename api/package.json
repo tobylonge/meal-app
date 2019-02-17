@@ -15,6 +15,7 @@
   "author": "Oluwatobi Alonge (tobylonge@gmail.com)",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "eslint-plugin-import": "^2.16.0",
     "express": "^4.16.4"
   },
