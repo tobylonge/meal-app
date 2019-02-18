@@ -27,15 +27,73 @@ const MealController = {
 
     },
 
-    getAMeal(req, res) {
+    getSingleMeal(req, res) {
         const id = req.params.id;
         const foundMeal = MealService.getAMeal(id);
         return res.json({
             status: 'success',
             data: foundMeal
+        }).status(200);
+
+    },
+
+    deleteAMeal(req, res) {
+        const id = req.params.id;
+        const deleteMeal = MealService.deleteAMeal(id);
+        return res.json({
+            status: 'success',
+            data: deleteMeal
+        }).status(200);
+
+    },
+
+    modifyAMeal(req, res) {
+        /* 
+            Json of format 
+            {
+                id: 'id of meal'
+                name: 'name of meal',
+                category: 'meal category',
+                price: 'amount'
+            }
+        */
+       const editedMeal = req.body;
+       const modifiedMeal = MealService.modifyAMeal(editedMeal);
+       return res.json({
+            status: 'success',
+            data: modifiedMeal
         }).status(201);
 
-    }
+    },
+
+    SelectTodayMeals(req, res) {
+        /* 
+            Array of Ids
+            [1,2,3,4]
+        */
+       const selectedMeals = MealService.selectTodayMeals(req.body);
+       return res.json({
+            status: 'success',
+            data: selectedMeals
+        }).status(201);
+
+    },
+
+    // fetchSelectedMeals(req, res) {
+    //     const allselectedMeals = MealService.getTodayMeals();
+    //     console.log('allselectedMeals ', allselectedMeals);
+    //     return res.json({
+    //         status: 'success',
+    //         data: allselectedMeals
+    //     }).status(200);
+    // },
+    fetchSelectedMeals(req, res) {
+        const allselectedMeals = MealService.getTodayMeals();
+        return res.json({
+            status: 'success',
+            data: allselectedMeals
+        }).status(200);
+    },
 }
 
 export default MealController;
