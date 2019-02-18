@@ -35,6 +35,16 @@ const MealController = {
             data: foundMeal
         }).status(200);
 
+    },
+
+    deleteAMeal(req, res) {
+        const id = req.params.id;
+        const deleteMeal = MealService.deleteAMeal(id);
+        return res.json({
+            status: 'success',
+            data: deleteMeal
+        }).status(200);
+
     }
 }
 
