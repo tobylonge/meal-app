@@ -2,6 +2,7 @@ import dummyData from '../utils/dummyData';
 import Meal from '../models/meal.models';
 
 let selectMeals = dummyData.meals;
+let orderMeals = [];
 const MealService = {
     fetchAllMeals() {
         const validMeals = dummyData.meals.map((meal) => {
@@ -48,10 +49,22 @@ const MealService = {
         return selectedMeals;
     },
 
+    getTodayOrder(orderIds) {
+        const selectedOrder = selectMeals.filter(function(meal) { 
+            return orderIds.indexOf(meal.id) !== -1; 
+        });
+        orderMeals = selectedOrder;
+        return selectedOrder;
+    },
+
     getTodayMeals() {
-        const a = selectMeals;
-        return a;
+        return selectMeals;
+    },
+
+    getTodayOrders() {
+        return orderMeals;
     }
+
     
 };
 

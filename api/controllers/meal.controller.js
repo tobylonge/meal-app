@@ -79,19 +79,32 @@ const MealController = {
 
     },
 
-    // fetchSelectedMeals(req, res) {
-    //     const allselectedMeals = MealService.getTodayMeals();
-    //     console.log('allselectedMeals ', allselectedMeals);
-    //     return res.json({
-    //         status: 'success',
-    //         data: allselectedMeals
-    //     }).status(200);
-    // },
     fetchSelectedMeals(req, res) {
         const allselectedMeals = MealService.getTodayMeals();
         return res.json({
             status: 'success',
             data: allselectedMeals
+        }).status(200);
+    },
+
+    selectedOrder(req, res) {
+        /* 
+            Array of Ids
+            [1,2,3,4]
+        */
+       const selectOrder = MealService.getTodayOrder(req.body);
+       return res.json({
+            status: 'success',
+            data: selectOrder
+        }).status(201);
+
+    },
+    
+    fetchSelectedOrders(req, res) {
+        const allselectedOrders = MealService.getTodayOrders();
+        return res.json({
+            status: 'success',
+            data: allselectedOrders
         }).status(200);
     },
 }
