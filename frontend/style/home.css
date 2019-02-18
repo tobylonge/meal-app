@@ -32,6 +32,10 @@
     padding: 0;
     flex-direction: column;
 }
+.home-wrapper .item-meal:hover {
+    transform: scale(1.15);
+    background: #fff;
+}
 .home-wrapper .item-meal .title {
     background: var(--primary);
     opacity: 0.6;
@@ -48,6 +52,15 @@
     border-radius: 6px;
     margin: 8px;
     position: relative;
+}
+.home-wrapper .cart {
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
 }
 .home-wrapper .item-meal .img-wrapper {
     border-right: 1px solid #ddd;
