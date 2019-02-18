@@ -47,6 +47,9 @@
     color: #fff;
     vertical-align: middle;
 }
+.menu-wrapper i {
+    color: var(--primary);
+}
 .menu-content {
     padding: 30px;
 }
@@ -61,7 +64,7 @@
     overflow: hidden;
     position: relative;
     transform-origin: top left;
-    width: 40px;
+    width: 50px;
     align-self: center;
 }
 .menu-content .card h2 {
@@ -71,6 +74,15 @@
 .menu-content .card h4 {
     font-size: 12px;
     color: #757575;
+}
+.menu-content .card h5 {
+    font-size: 11px;
+    background: #ddd;
+    padding: 3px 5px;
+    margin-top: 3px;
+    border-radius: 5px;
+    color: #555;
+    width: max-content;
 }
 .menu-content .name-wrapper {
     margin-left: 10px;

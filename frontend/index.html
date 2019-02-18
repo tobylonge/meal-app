@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Meal Booking</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/core.css">
+        <link rel="stylesheet" href="style/home.css">
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="home-wrapper">
+            <header>
+                <div class="d-flex">
+                    <img src="img/recipes-book-solid.svg" alt="logo"> 
+                    <span>Meal Booking</span>
+                </div>
+                <ul class="d-flex meal-category">
+                    <li>Main Dishes</li>
+                    <li>Soups</li>
+                    <li>Meat</li>
+                    <li>Breakfast</li>
+                    <li>Drinks</li>
+                    <li>Extras</li>
+                </ul>
+            </header>
+            <div class="card d-flex item-meal">
+                <div class="title">Main Dishes</div>
+                <div class="d-flex content">
+                    <div class="img-wrapper">
+                        <img src="img/jollof-rice.jpg" alt="jollof-rice">
+                    </div>
+                    <div class="content-wrapper">
+                        <h2>Jollof Rice (Full/ Half Portion)</h2>
+                        <h4>₦450 / ₦250</h4>
+                    </div>
+                    <div class="add-cart">+</div>
+                </div>
+                <div class="d-flex content">
+                    <div class="img-wrapper">
+                        <img src="img/ewa-agoyin.jpg" alt="ewa-agoyin">
+                    </div>
+                    <div class="content-wrapper">
+                        <h2>Ewa Aganyin</h2>
+                        <h4>₦350</h4>
+                    </div>
+                    <div class="add-cart">+</div>
+                </div>
+                <div class="d-flex content">
+                    <div class="img-wrapper">
+                        <img src="img/pounded-yam.jpg" alt="pounded-yam">
+                    </div>
+                    <div class="content-wrapper">
+                        <h2>pounded Yam</h2>
+                        <h4>₦500</h4>
+                    </div>
+                    <div class="add-cart">+</div>
+                </div>
+            </div>
+            <div class="card d-flex item-meal">
+                    <div class="title">Soups</div>
+                    <div class="d-flex content">
+                        <div class="img-wrapper">
+                            <img src="img/jollof-rice.jpg" alt="jollof-rice">
+                        </div>
+                        <div class="content-wrapper">
+                            <h2>Jollof Rice (Full/ Half Portion)</h2>
+                            <h4>₦450 / ₦250</h4>
+                        </div>
+                        <div class="add-cart">+</div>
+                    </div>
+                    <div class="d-flex content">
+                        <div class="img-wrapper">
+                            <img src="img/ewa-agoyin.jpg" alt="ewa-agoyin">
+                        </div>
+                        <div class="content-wrapper">
+                            <h2>Ewa Aganyin</h2>
+                            <h4>₦350</h4>
+                        </div>
+                        <div class="add-cart">+</div>
+                    </div>
+                    <div class="d-flex content">
+                        <div class="img-wrapper">
+                            <img src="img/pounded-yam.jpg" alt="pounded-yam">
+                        </div>
+                        <div class="content-wrapper">
+                            <h2>pounded Yam</h2>
+                            <h4>₦500</h4>
+                        </div>
+                        <div class="add-cart">+</div>
+                    </div>
+            </div>
+
+            <!-- <div class="menu-content">
+                <h3>Welcome,</h3>
+                <h1>Want to order some <strong>tasty food</strong></h1>
+            </div> -->
+            <a href="#modal">
+                <div class="cart modal-btn">
+                    <i class="fas fa-shopping-basket fa-2x"></i>
+                </div>
+            </a>
+        </div>
+        <div class="modal-cart" id="modal">
+            <div class="content">
+                <div class="d-flex modal-header">
+                    <div class="modal-cart-title">Your Basket</div>
+                    <div class="modal-cart-clear-btn">Clear</div>
+                </div>
+                <ul class="d-flex">
+                    <li>
+                        <div class="d-flex">
+                            <div class="modal-cart-menu">
+                                Jollof Rice (Full Portion)
+                                <p>1 qty</p>
+                            </div>
+                            <div class="modal-cart-amount">₦450</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <div class="modal-cart-menu">
+                                Pounded Yam
+                                <p>1 qty</p>
+                            </div>
+                            <div class="modal-cart-amount">₦500</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <div class="modal-cart-menu">
+                                Total Amount
+                            </div>
+                            <div class="modal-cart-amount"><b>₦950</b></div>
+                        </div>
+                    </li>
+
+                </ul>
+                <a class="btn btn-primary w100">Confirm Order</a>
+            </div>
+        </div>
+        <!-- <div id="modal">
+            <a href="#"></a>
+            <section>
+                <form>
+                    <div>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Your e-mail address" required autofocus>
+                    </div>
+
+                    <div>
+                        <span><i class="fa fa-lock"></i></span>
+                        <input type="password" name="password" placeholder="Your password" required>
+                    </div>
+
+                    <div class="controls">
+                        <button type="submit" class="button">
+                            <i class="fa fa-chevron-right"></i>
+                            Login
+                        </button>
+
+                        <a href="#"><i class="fa fa-times"></i> Cancel</a>
+                    </div>
+                </form>
+            </section>
+        </div> -->
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
