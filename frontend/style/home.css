@@ -32,7 +32,7 @@
     padding: 0;
     flex-direction: column;
 }
-.home-wrapper .item-meal:hover {
+.home-wrapper .item-meal .content :hover {
     transform: scale(1.15);
     background: #fff;
 }
