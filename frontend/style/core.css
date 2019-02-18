@@ -344,4 +344,41 @@ q:before {
   .md-checkbox input[type="checkbox"]:disabled:checked + label:before {
     background: rgba(0, 0, 0, 0.26);
   }
+
+#modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    overflow: hidden;
+  }
+#modal:hover:before {
+    transform: scale(1.5);
+  }
+ #modal:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: " ";
+    background-image: url("http://ak.picdn.net/shutterstock/videos/3435617/preview/stock-footage-modern-city-a-busy-overpass-at-sunset.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transition: transform 60s linear;
+    transform: scale(1);
+    transform-origin: left top;
+  }
+#modal:focus, #modal:target {
+    transform: scale(1);
+  }
   
