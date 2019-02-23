@@ -146,7 +146,7 @@
                     </li>
 
                 </ul>
-                <a class="btn btn-primary w100">Confirm Order</a>
+                <a class="btn btn-primary w100" href="checkout.html">Checkout</a>
             </div>
         </div>
         <!-- <div id="modal">
@@ -175,7 +175,28 @@
             </section>
         </div> -->
         
+        <!-- alert -->
+        <div class="alerts" hidden id="alert">
+            <div class="alert-box success is-open">
+                <div class="alert-content">
+                    <i class="fas fa-check-circle"></i>
+                    <div>Item has been added to Cart successfully</div>
+                    <a href="#" class="close">×</a>
+                </div>
+            </div>
+        </div>
         
-        <script src="" async defer></script>
+        <script type="text/javascript">
+            document.querySelector('#modal').addEventListener('click', () => {
+                window.location='#';
+            });
+            document.querySelector('.home-wrapper .item-meal .content').addEventListener('click', () => {
+                document.querySelector('#alert').removeAttribute('hidden');
+                setTimeout(() => {
+                    document.querySelector('#alert').setAttribute('hidden', "");
+                }, 5000)
+            });
+
+        </script>
     </body>
 </html>

@@ -32,10 +32,6 @@
     padding: 0;
     flex-direction: column;
 }
-.home-wrapper .item-meal .content :hover {
-    transform: scale(1.15);
-    background: #fff;
-}
 .home-wrapper .item-meal .title {
     background: var(--primary);
     opacity: 0.6;
