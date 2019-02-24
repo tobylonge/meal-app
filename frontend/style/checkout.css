@@ -53,3 +53,34 @@
     color: var(--primary);
     text-decoration: underline;
 }
+
+.modal-checkout .content {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 15px 15px 30px;
+    min-width: 50vh;
+    text-align: center;
+    font-size: 14px;
+}
+.modal-checkout .content img {
+    height: 120px;
+}
+.modal-checkout .content p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-checkout .content h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.modal-checkout .content .small {
+    font-size: 14px;
+}

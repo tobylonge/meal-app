@@ -24,3 +24,25 @@
     color: #ffffff;
     text-decoration: none;
 }
+
+@media (min-width: 768px) {
+    .login-wrapper {
+        width: 60%;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px;
+        border-radius: 8px;
+        padding: 45px;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+    }
+    .login-content {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .login-content input, .login-content select, .login-content .bar {
+        width: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test';
 
-let meal = require('../models/meal.models');
+import app from '../index';
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let should = chai.should();
@@ -20,7 +20,7 @@ describe('Meals', () => {
     */
     describe('/GET meals', () => {
         it('it should GET all meals', (done) => {
-        chai.request(server)
+        chai.request(app)
             .get('/')
             .end((err, res) => {
                     res.should.have.status(200);

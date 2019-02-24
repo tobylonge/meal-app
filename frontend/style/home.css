@@ -1,8 +1,10 @@
 .home-wrapper header {
     padding: 10px 30px 0;
-    display: flex;
     box-shadow: 0px 7px 6px -5px #DFE1E5;
     border-top: 5px solid var(--primary);
+}
+.home-wrapper .header-wrapper {
+    display: flex;
     flex-direction: column;
 }
 .home-wrapper header a {
