@@ -345,7 +345,7 @@ q:before {
     background: rgba(0, 0, 0, 0.26);
   }
 
-#modal {
+.modal {
     position: fixed;
     left: 0;
     right: 0;
@@ -357,10 +357,10 @@ q:before {
     transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
     overflow: hidden;
   }
-#modal:hover:before {
+.modal:hover:before {
     transform: scale(1.5);
   }
- #modal:before {
+ .modal:before {
     display: block;
     position: absolute;
     left: 0;
@@ -376,7 +376,7 @@ q:before {
     transform: scale(1);
     transform-origin: left top;
   }
-#modal:focus, #modal:target {
+  .modal:focus, .modal:target {
     transform: scale(1);
   }
   
@@ -499,4 +499,9 @@ q:before {
   right: 0.25rem;
   color: #333;
   opacity: 0.3;
+}
+@media (min-width: 768px) {
+  .visible-xs {
+    display: none;
+  }
 }
