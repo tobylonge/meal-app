@@ -1,19 +1,15 @@
 process.env.NODE_ENV = 'test';
 
-import app from '../index';
+let app = '../index';
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let should = chai.should();
+const expect = require("chai").expect;
 
 chai.use(chaiHttp);
 
 //Our parent block
 describe('Meals', () => {
-    beforeEach((done) => { //Before each test we empty the database
-        meal.remove({}, (err) => { 
-           done();           
-        });        
-    });
 
     /*
     * Test the /GET route
@@ -21,10 +17,11 @@ describe('Meals', () => {
     describe('/GET meals', () => {
         it('it should GET all meals', (done) => {
         chai.request(app)
-            .get('/')
+            .get('/api/v1/meals')
             .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('array');
+                console.log('res ', res);
+                    expect(res.status).to.be(200);
+                    expect(res.body).to.be.an('array');
                     // res.body.length.should.be.eql(0);
                 done();
             });
