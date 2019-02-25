@@ -221,37 +221,9 @@ describe('Meals', () => {
         });
     });
 
-    // Get all selected orders
-    describe('GET /api/v1/meals/order', () => {
-        it('it should GET all selected meals', (done) => {
-        chai.request(app)
-            .get('/api/v1/meals/order')
-            .end((err, res) => {
-                    expect(res).to.have.status(200);
-                    expect(res.body).to.be.a('object');
-                    expect(res.body.length).not.to.be.eql(0);
-                    expect(res.body).to.have.property('status');
-                    expect(res.body).to.have.property('data');
-                    expect(res.body.status).to.be.a('string');
-                    expect(res.body.status).to.equal('success');
-                    expect(res.body.data).to.be.a('array');
-                    expect(res.body.data[0]).to.be.a('object');
-                    expect(res.body.data[0]).have.property('id');
-                    expect(res.body.data[0]).have.property('name');
-                    expect(res.body.data[0]).have.property('category');
-                    expect(res.body.data[0]).have.property('price');
-                    expect(res.body.data[0].id).to.be.a('number');
-                    expect(res.body.data[0].name).to.be.a('string');
-                    expect(res.body.data[0].category).to.be.a('string');
-                    expect(res.body.data[0].price).to.be.a('string');
-                done();
-            });
-        }); 
-    });
-
     // Test to post selected orders
     describe('POST /api/v1/meals/order', () => {
-        it('it should add selected meals', (done) => {
+        it('it should add orders from user', (done) => {
         chai.request(app)
             .post('/api/v1/meals/order')
             .send([1,2])
@@ -275,6 +247,34 @@ describe('Meals', () => {
             done();
             });
         });
+    });
+
+    // Get all selected orders
+    describe('GET /api/v1/meals/order', () => {
+        it('it should GET all orders from the day', (done) => {
+        chai.request(app)
+            .get('/api/v1/meals/order')
+            .end((err, res) => {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('object');
+                    expect(res.body.length).not.to.be.eql(0);
+                    expect(res.body).to.have.property('status');
+                    expect(res.body).to.have.property('data');
+                    expect(res.body.status).to.be.a('string');
+                    expect(res.body.status).to.equal('success');
+                    expect(res.body.data).to.be.a('array');
+                    expect(res.body.data[0]).to.be.a('object');
+                    expect(res.body.data[0]).have.property('id');
+                    expect(res.body.data[0]).have.property('name');
+                    expect(res.body.data[0]).have.property('category');
+                    expect(res.body.data[0]).have.property('price');
+                    expect(res.body.data[0].id).to.be.a('number');
+                    expect(res.body.data[0].name).to.be.a('string');
+                    expect(res.body.data[0].category).to.be.a('string');
+                    expect(res.body.data[0].price).to.be.a('string');
+                done();
+            });
+        }); 
     });
     
 });
