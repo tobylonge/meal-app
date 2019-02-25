@@ -19,3 +19,5 @@ app.use('/api/v1/meals', mealRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
+
+export default app;
