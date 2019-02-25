@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node index.js",
-    "test": "mocha --require @babel/register test/*.js"
+    "test": "mocha --require @babel/register test/*.js  --exit",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": "https://github.com/tobylonge/meal-app",
   "keywords": [
@@ -29,6 +31,7 @@
     "chai-http": "^4.2.1",
     "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "istanbul": "^0.4.5",
     "mocha": "^6.0.1",
     "nodemon": "^1.18.10"
   }
