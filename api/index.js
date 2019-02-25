@@ -6,7 +6,7 @@ import mealRoutes from './routes/meal.route';
 
 const app = express();
 
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 app.use(bodyParser.json());
 
@@ -19,3 +19,5 @@ app.use('/api/v1/meals', mealRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
+
+export default app;
