@@ -38,7 +38,7 @@ const MealService = {
     modifyAMeal(meal) {
         const modifyId = meal.id - 1;
         dummyData.meals[modifyId] = meal;
-        return meal;
+        return meal || {};
     },
 
     selectTodayMeals(selectedIds) {

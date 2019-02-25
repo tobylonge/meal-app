@@ -21,18 +21,20 @@
         <![endif]-->
         <div class="home-wrapper">
             <header>
-                <div class="d-flex">
-                    <img src="img/recipes-book-solid.svg" alt="logo"> 
-                    <span>Meal Booking</span>
+                <div class="header-wrapper">
+                    <div class="d-flex">
+                        <img src="img/recipes-book-solid.svg" alt="logo"> 
+                        <span>Meal Booking</span>
+                    </div>
+                    <ul class="d-flex meal-category">
+                        <li>Main Dishes</li>
+                        <li>Soups</li>
+                        <li>Meat</li>
+                        <li>Breakfast</li>
+                        <li>Drinks</li>
+                        <li>Extras</li>
+                    </ul>
                 </div>
-                <ul class="d-flex meal-category">
-                    <li>Main Dishes</li>
-                    <li>Soups</li>
-                    <li>Meat</li>
-                    <li>Breakfast</li>
-                    <li>Drinks</li>
-                    <li>Extras</li>
-                </ul>
             </header>
             <div class="card d-flex item-meal">
                 <div class="title">Main Dishes</div>
@@ -111,7 +113,7 @@
                 </div>
             </a>
         </div>
-        <div class="modal-cart" id="modal">
+        <div class="modal modal-cart" id="modal">
             <div class="content">
                 <div class="d-flex modal-header">
                     <div class="modal-cart-title">Your Basket</div>
@@ -146,7 +148,7 @@
                     </li>
 
                 </ul>
-                <a class="btn btn-primary w100">Confirm Order</a>
+                <a class="btn btn-primary w100" href="checkout.html">Checkout</a>
             </div>
         </div>
         <!-- <div id="modal">
@@ -175,7 +177,28 @@
             </section>
         </div> -->
         
+        <!-- alert -->
+        <div class="alerts" hidden id="alert">
+            <div class="alert-box success is-open">
+                <div class="alert-content">
+                    <i class="fas fa-check-circle"></i>
+                    <div>Item has been added to Cart successfully</div>
+                    <a href="#" class="close">×</a>
+                </div>
+            </div>
+        </div>
         
-        <script src="" async defer></script>
+        <script type="text/javascript">
+            document.querySelector('#modal').addEventListener('click', () => {
+                window.location='#';
+            });
+            document.querySelector('.home-wrapper .item-meal .content').addEventListener('click', () => {
+                document.querySelector('#alert').removeAttribute('hidden');
+                setTimeout(() => {
+                    document.querySelector('#alert').setAttribute('hidden', "");
+                }, 5000)
+            });
+
+        </script>
     </body>
 </html>

@@ -31,3 +31,11 @@
     margin: 0 auto;
     margin-bottom: 5px;
 }
+
+@media (min-width: 768px) {
+    .home-wrapper .home-buttons {
+        width: 30%;
+        margin: 0 auto;
+        bottom: 150px;
+    }
+}
